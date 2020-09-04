@@ -1,3 +1,4 @@
+# Overview 
 C++98 string class that provides functionality of both `std::string` and `std::string_view`. 
 
 It was inteded for boost library, but lacks documentation.
@@ -10,7 +11,7 @@ Longer strings are reference-counted, so that copies are cheap and thread-safe.
 
 The class is called `const_string` because it doesn't allow modification of individual characters of the string. And that allows for thread-safe reference counting with no undefined behaviour.
 
-Examples:
+# Examples
 
 ```
 // No memory allocation due to small string optimization.
@@ -32,4 +33,6 @@ std::string d0("abcdefghijklmnoprstqvwxyz");
 const_string d1(boost::cref(d0)); 
 ```
 
-TODO: Update with unit tests and C++11 `std::` classes.
+# TODO
+
+Update with unit tests and C++11 `std::` classes.
