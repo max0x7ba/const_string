@@ -2,7 +2,7 @@ C++98 string class that provides functionality of both `std::string` and `std::s
 
 It was inteded for boost library, but lacks documentation.
 
-This allows functions to always take `boost::const_string` argument without memory allocations, unlike `std::string`. And no need for overloads that take `std::string_view` instead of `std::string`.
+This allows functions to always take `boost::const_string` argument without memory allocations, unlike `std::string`. And no need for separate overloads that take `std::string_view` instead of `std::string`.
 
 Small string optimization is there and the small string buffer size is controlled by the template argument. 
 
