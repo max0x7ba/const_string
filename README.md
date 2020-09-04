@@ -13,20 +13,21 @@ The class is called `const_string` because it doesn't allow modification of indi
 Examples:
 
 ```
- / No memory allocation due to small string optimization.
+// No memory allocation due to small string optimization.
 const_string a("abc");
 
 // Memory allocation because the string is long.
-const_string b("abcdefghijklmnoprstqvwxyz"); 
+const_string b0("abcdefghijklmnoprstqvwxyz"); 
 
 // No memory allocation, reference counter increment.
-const_string b2 = b; 
+const_string b1 = b0; 
 
 // No memory allocation, the string literal is referred to.
 // Equivalent to using std::string_view.
 const_string c(boost::cref("abcdefghijklmnoprstqvwxyz")); 
 
 // Refer to std::string with no memory allocation or copy.
+// Equivalent to using std::string_view.
 std::string d0("abcdefghijklmnoprstqvwxyz");
 const_string d1(boost::cref(d0)); 
 ```
