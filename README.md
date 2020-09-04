@@ -1,7 +1,7 @@
 # Overview 
 C++98 string class that provides functionality of both `std::string` and `std::string_view`. 
 
-It was inteded for boost library, but lacks documentation.
+It was inteded for boost library, but lacks documentation till this day.
 
 This allows functions to always take `boost::const_string` argument without memory allocations, unlike `std::string`. And no need for separate overloads that take `std::string_view` in addition to `std::string`.
 
@@ -35,4 +35,5 @@ const_string d1(boost::cref(d0));
 
 # TODO
 
-Update with unit tests and C++11 `std::` classes.
+* Update with unit tests and C++11 `std::` classes.
+* Documentation.
