@@ -43,4 +43,4 @@ const_string d1(boost::cref(d0));
 
 * Documentation.
 * Update with unit tests and C++11 `std::` classes.
-* Use Facebook small string optimization to allow for 7 more characters.
+* Use Facebook small string optimization to allow for 7 more characters with no memory allocation.
